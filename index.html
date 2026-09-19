@@ -316,6 +316,31 @@ footer{border-top:1px solid var(--border);background:var(--bg-2);padding:64px 0 
     </div>
   </section>
 
+  <!-- NAME -->
+  <section id="name">
+    <div class="eyebrow" data-i18n="nameEyebrow">Om namnet</div>
+    <h2 data-i18n="nameH2">Varför Reactive Power?</h2>
+    <p class="section-intro" data-i18n="nameIntro">Namnet kommer från reaktiv effekt – den del av växelströmmen som inte utför något arbete, men som elnätet inte fungerar utan.</p>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c2.5-7 5-7 7.5 0s5 7 7.5 0 3.5-5 5-3"/></svg></div>
+        <h3 data-i18n="name1h">Vad är reaktiv effekt?</h3>
+        <p data-i18n="name1p">I ett växelströmsnät kan ström och spänning vara fasförskjutna. Då pendlar energi fram och tillbaka mellan källa och last, lagrad i magnetiska och elektriska fält. Det är reaktiv effekt (Q), som mäts i var – till skillnad från aktiv effekt (P) i watt, som utför det nyttiga arbetet.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+        <h3 data-i18n="name2h">Varför behövs den?</h3>
+        <p data-i18n="name2p">Motorer och transformatorer behöver reaktiv effekt för att bygga upp sina magnetfält, och den håller uppe spänningen i nätet. Brist på reaktiv effekt kan sänka spänningen och i värsta fall få nätet att kollapsa – ett strömavbrott.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2"/><path d="M6 12h4M8 10v4M13 12h3"/></svg></div>
+        <h3 data-i18n="name3h">Vår roll</h3>
+        <p data-i18n="name3p">När allt mer el kommer från vind och sol behöver nätet nya källor till stabilitet. Våra batterier balanserar produktionen och kan via sina växelriktare också bidra med reaktiv effekt och spänningsstöd lokalt.</p>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:.85rem;margin-top:22px" data-i18n="nameSource">Källa: <a href="https://sv.wikipedia.org/wiki/Reaktiv_effekt" target="_blank" rel="noopener">Wikipedia – Reaktiv effekt</a></p>
+  </section>
+
   <!-- INVESTOR -->
   <section id="investor">
     <div class="investor">
@@ -411,6 +436,12 @@ const I18N = {
     logoEyebrow:"Visuell identitet", logoH2:"Tre logoförslag",
     logoIntro:"En cirkel med pilar i båda riktningar – reaktiv effekt som flödar fram och tillbaka. Klicka på ett förslag för att använda det i sidhuvudet.",
     logoName1:"Förslag 1 · Orbit", logoName2:"Förslag 2 · Bolt", logoName3:"Förslag 3 · Pulse", logoPick:"Använd denna",
+    nameEyebrow:"Om namnet", nameH2:"Varför Reactive Power?",
+    nameIntro:"Namnet kommer från reaktiv effekt – den del av växelströmmen som inte utför något arbete, men som elnätet inte fungerar utan.",
+    name1h:"Vad är reaktiv effekt?", name1p:"I ett växelströmsnät kan ström och spänning vara fasförskjutna. Då pendlar energi fram och tillbaka mellan källa och last, lagrad i magnetiska och elektriska fält. Det är reaktiv effekt (Q), som mäts i var – till skillnad från aktiv effekt (P) i watt, som utför det nyttiga arbetet.",
+    name2h:"Varför behövs den?", name2p:"Motorer och transformatorer behöver reaktiv effekt för att bygga upp sina magnetfält, och den håller uppe spänningen i nätet. Brist på reaktiv effekt kan sänka spänningen och i värsta fall få nätet att kollapsa – ett strömavbrott.",
+    name3h:"Vår roll", name3p:"När allt mer el kommer från vind och sol behöver nätet nya källor till stabilitet. Våra batterier balanserar produktionen och kan via sina växelriktare också bidra med reaktiv effekt och spänningsstöd lokalt.",
+    nameSource:'Källa: <a href="https://sv.wikipedia.org/wiki/Reaktiv_effekt" target="_blank" rel="noopener">Wikipedia – Reaktiv effekt</a>',
     invEyebrow:"För investerare", invH2:"Är du intresserad av att investera i vårt projekt?",
     invP:"Vi söker partners som vill bygga framtidens distribuerade balanskraft i Österbotten. Hör av dig så berättar vi mer.",
     invCta:"Kontakta oss →",
@@ -453,6 +484,12 @@ const I18N = {
     logoEyebrow:"Visuaalinen ilme", logoH2:"Kolme logoehdotusta",
     logoIntro:"Ympyrä, jossa nuolet molempiin suuntiin – loistehoa joka virtaa edestakaisin. Napsauta ehdotusta käyttääksesi sitä ylätunnisteessa.",
     logoName1:"Ehdotus 1 · Orbit", logoName2:"Ehdotus 2 · Bolt", logoName3:"Ehdotus 3 · Pulse", logoPick:"Käytä tätä",
+    nameEyebrow:"Nimestä", nameH2:"Miksi Reactive Power?",
+    nameIntro:"Nimi tulee loistehosta – vaihtovirran osasta, joka ei tee työtä, mutta jota ilman sähköverkko ei toimi.",
+    name1h:"Mitä loisteho on?", name1p:"Vaihtovirtaverkossa virta ja jännite voivat olla eri vaiheessa. Tällöin energia heilahtelee edestakaisin lähteen ja kuorman välillä magneetti- ja sähkökenttiin varastoituneena. Tämä on loistehoa (Q), jonka yksikkö on var – erotuksena pätötehosta (P), joka mitataan watteina ja tekee varsinaisen työn.",
+    name2h:"Miksi sitä tarvitaan?", name2p:"Moottorit ja muuntajat tarvitsevat loistehoa magneettikenttiensä muodostamiseen, ja se pitää yllä verkon jännitettä. Loistehon puute voi laskea jännitettä ja pahimmillaan romahduttaa verkon – sähkökatko.",
+    name3h:"Roolimme", name3p:"Kun yhä suurempi osa sähköstä tulee tuulesta ja auringosta, verkko tarvitsee uusia vakauden lähteitä. Akkumme tasapainottavat tuotantoa ja voivat vaihtosuuntaajiensa kautta tuottaa myös loistehoa ja jännitetukea paikallisesti.",
+    nameSource:'Lähde: <a href="https://fi.wikipedia.org/wiki/Loisteho" target="_blank" rel="noopener">Wikipedia – Loisteho</a>',
     invEyebrow:"Sijoittajille", invH2:"Oletko kiinnostunut sijoittamaan hankkeeseemme?",
     invP:"Etsimme kumppaneita, jotka haluavat rakentaa tulevaisuuden hajautettua säätövoimaa Pohjanmaalle. Ota yhteyttä, niin kerromme lisää.",
     invCta:"Ota yhteyttä →",
@@ -495,6 +532,12 @@ const I18N = {
     logoEyebrow:"Visual identity", logoH2:"Three logo proposals",
     logoIntro:"A circle with arrows in both directions – reactive power flowing back and forth. Click a proposal to use it in the header.",
     logoName1:"Proposal 1 · Orbit", logoName2:"Proposal 2 · Bolt", logoName3:"Proposal 3 · Pulse", logoPick:"Use this one",
+    nameEyebrow:"About the name", nameH2:"Why Reactive Power?",
+    nameIntro:"The name comes from reactive power – the part of alternating current that does no work, but without which the grid cannot function.",
+    name1h:"What is reactive power?", name1p:"In an AC grid, current and voltage can be out of phase. Energy then oscillates back and forth between source and load, stored in magnetic and electric fields. This is reactive power (Q), measured in var – as opposed to active power (P), measured in watts, which does the useful work.",
+    name2h:"Why is it needed?", name2p:"Motors and transformers need reactive power to build up their magnetic fields, and it holds up the voltage in the grid. A shortage of reactive power can depress voltage and, at worst, collapse the grid – a blackout.",
+    name3h:"Our role", name3p:"As more and more electricity comes from wind and sun, the grid needs new sources of stability. Our batteries balance production and, through their inverters, can also supply reactive power and voltage support locally.",
+    nameSource:'Source: <a href="https://en.wikipedia.org/wiki/AC_power" target="_blank" rel="noopener">Wikipedia – AC power</a>',
     invEyebrow:"For investors", invH2:"Interested in investing in our project?",
     invP:"We are looking for partners who want to build the distributed balancing power of the future in Ostrobothnia. Get in touch and we'll tell you more.",
     invCta:"Contact us →",
