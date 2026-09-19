@@ -88,6 +88,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;letter-spacing:-.02em;ma
 .card .ico svg{width:22px;height:22px}
 .card h3{font-size:1.08rem;margin-bottom:8px;font-weight:700}
 .card p{color:var(--muted);font-size:.96rem}
+.card.wide{grid-column:1/-1;border-color:rgba(34,211,238,.3)}
 
 /* ---------- BESS spec ---------- */
 .bess{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
@@ -279,6 +280,11 @@ footer{border-top:1px solid var(--border);background:var(--bg-2);padding:64px 0 
         <h3 data-i18n="idea6h">Lokala entreprenörer</h3>
         <p data-i18n="idea6p">Vi anlitar lokala entreprenörer för byggnad och drift när det går – det gynnar sysselsättningen på landsbygden.</p>
       </div>
+      <div class="card wide">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V11l5 3V11l5 3V5h4v16z"/><path d="M3 21h18"/></svg></div>
+        <h3 data-i18n="idea7h">Kapacitet för industrin</h3>
+        <p data-i18n="idea7p">Har du en energiintensiv industriverksamhet och din nuvarande elanslutning begränsar din tillväxt? Låt oss hjälpa med ett batteri! Vi ordnar med extra kapacitet enligt dina behov.</p>
+      </div>
     </div>
   </section>
 
@@ -293,13 +299,14 @@ footer{border-top:1px solid var(--border);background:var(--bg-2);padding:64px 0 
           <div class="spec-row"><span class="k" data-i18n="bessK1">Plats</span><span class="v" data-i18n="bessV1">Maxmo, Vörå kommun<small>Österbotten, Finland</small></span></div>
           <div class="spec-row"><span class="k" data-i18n="bessK2">Nätstation</span><span class="v" data-i18n="bessV2">1 600 kVA medelspänning<small>20 / 0,4 kV</small></span></div>
           <div class="spec-row"><span class="k" data-i18n="bessK3">Batterier</span><span class="v" data-i18n="bessV3">4 × Cactos Mylo<small>260 kVA / 520 kWh per enhet</small></span></div>
-          <div class="spec-row"><span class="k" data-i18n="bessK4">Total kapacitet</span><span class="v" data-i18n="bessV4">1 040 kVA / 2 080 kWh<small>50–100 % utökning när Fingrid tillåter</small></span></div>
+          <div class="spec-row"><span class="k" data-i18n="bessK4">Total kapacitet</span><span class="v" data-i18n="bessV4">999 kW / 2 080 kWh<small>50–100 % utökning när Fingrid tillåter</small></span></div>
           <div class="spec-row"><span class="k" data-i18n="bessK5">Driftstart</span><span class="v" data-i18n="bessV5">November 2026</span></div>
+          <div class="spec-row"><span class="k" data-i18n="bessK6">Co-hosting</span><span class="v" data-i18n="bessV6">Möjlighet till co-hosting<small>Området är färdigt förberett för 4 × Mylo eller motsvarande footprint</small></span></div>
         </div>
       </div>
       <div>
         <div class="statline">
-          <div class="stat"><div class="n">1 040</div><div class="l" data-i18n="bessStat1">kVA effekt</div></div>
+          <div class="stat"><div class="n">999</div><div class="l" data-i18n="bessStat1">kW effekt</div></div>
           <div class="stat"><div class="n">2 080</div><div class="l" data-i18n="bessStat2">kWh lagring</div></div>
           <div class="stat"><div class="n">4</div><div class="l" data-i18n="bessStat3">Cactos Mylo</div></div>
         </div>
@@ -315,7 +322,7 @@ footer{border-top:1px solid var(--border);background:var(--bg-2);padding:64px 0 
       <div class="eyebrow" data-i18n="invEyebrow">För investerare</div>
       <h2 data-i18n="invH2">Är du intresserad av att investera i vårt projekt?</h2>
       <p data-i18n="invP">Vi söker partners som vill bygga framtidens distribuerade balanskraft i Österbotten. Hör av dig så berättar vi mer.</p>
-      <a class="btn btn-primary" href="mailto:hello@reactive.fi" data-i18n="invCta">Kontakta oss →</a>
+      <a class="btn btn-primary" href="mailto:erik@reactive.fi" data-i18n="invCta">Kontakta oss →</a>
     </div>
   </section>
 
@@ -328,7 +335,7 @@ footer{border-top:1px solid var(--border);background:var(--bg-2);padding:64px 0 
       <div>
         <div class="foot-brand"><svg id="footLogo"><use href="#logo3"/></svg><b>Reactive Power Ab Oy</b></div>
         <p class="muted" data-i18n="footAbout">Distribuerad batterilagring och balanskraft för förnybar energi i Österbotten.</p>
-        <p style="margin-top:14px"><a href="mailto:hello@reactive.fi">hello@reactive.fi</a></p>
+        <p style="margin-top:14px"><a href="mailto:erik@reactive.fi">erik@reactive.fi</a></p>
       </div>
       <div>
         <h4 data-i18n="footCompanyH">Företagsuppgifter</h4>
@@ -389,14 +396,16 @@ const I18N = {
     idea4h:"Finländsk & europeisk teknik", idea4p:"Komponenter byggda för nordiskt klimat med stark it-säkerhet – finländsk och europeisk teknik.",
     idea5h:"Ändamålsenlig placering", idea5p:"Placering i anslutning till fastigheter som möjliggör samarbete mellan elproducenter och konsumenter.",
     idea6h:"Lokala entreprenörer", idea6p:"Vi anlitar lokala entreprenörer för byggnad och drift när det går – det gynnar sysselsättningen på landsbygden.",
+    idea7h:"Kapacitet för industrin", idea7p:"Har du en energiintensiv industriverksamhet och din nuvarande elanslutning begränsar din tillväxt? Låt oss hjälpa med ett batteri! Vi ordnar med extra kapacitet enligt dina behov.",
     bessEyebrow:"Vårt första projekt", bessH2:"BESS nr 1 – Maxmo",
     bessIntro:"Vår första batterilagringsenhet ligger i Maxmo i Vörå kommun, Österbotten – ansluten till en medelspänningsnätstation.",
     bessK1:"Plats", bessV1:"Maxmo, Vörå kommun<small>Österbotten, Finland</small>",
     bessK2:"Nätstation", bessV2:"1 600 kVA medelspänning<small>20 / 0,4 kV</small>",
     bessK3:"Batterier", bessV3:"4 × Cactos Mylo<small>260 kVA / 520 kWh per enhet</small>",
-    bessK4:"Total kapacitet", bessV4:"1 040 kVA / 2 080 kWh<small>50–100 % utökning när Fingrid tillåter</small>",
+    bessK4:"Total kapacitet", bessV4:"999 kW / 2 080 kWh<small>50–100 % utökning när Fingrid tillåter</small>",
     bessK5:"Driftstart", bessV5:"November 2026",
-    bessStat1:"kVA effekt", bessStat2:"kWh lagring", bessStat3:"Cactos Mylo",
+    bessK6:"Co-hosting", bessV6:"Möjlighet till co-hosting<small>Området är färdigt förberett för 4 × Mylo eller motsvarande footprint</small>",
+    bessStat1:"kW effekt", bessStat2:"kWh lagring", bessStat3:"Cactos Mylo",
     bessNote:"Fyra Cactos Mylo-enheter ansluts till nätstationen. Kapaciteten kan utökas med 50–100 % i takt med att Fingrid tillåter ökat effektuttag.",
     bessBadge:"Driftstart november 2026",
     logoEyebrow:"Visuell identitet", logoH2:"Tre logoförslag",
@@ -429,14 +438,16 @@ const I18N = {
     idea4h:"Suomalaista & eurooppalaista tekniikkaa", idea4p:"Pohjoiseen ilmastoon rakennetut komponentit ja vahva tietoturva – suomalaista ja eurooppalaista tekniikkaa.",
     idea5h:"Tarkoituksenmukainen sijoitus", idea5p:"Sijoitus kiinteistöjen yhteyteen, mikä mahdollistaa yhteistyön sähköntuottajien ja kuluttajien välillä.",
     idea6h:"Paikalliset urakoitsijat", idea6p:"Käytämme paikallisia urakoitsijoita rakentamiseen ja käyttöön kun mahdollista – se tukee maaseudun työllisyyttä.",
+    idea7h:"Kapasiteettia teollisuudelle", idea7p:"Onko sinulla energiaintensiivistä teollisuutta ja rajoittaako nykyinen sähköliittymäsi kasvuasi? Anna meidän auttaa akulla! Järjestämme lisäkapasiteettia tarpeidesi mukaan.",
     bessEyebrow:"Ensimmäinen hankkeemme", bessH2:"BESS nro 1 – Maksamaa",
     bessIntro:"Ensimmäinen akkuvarastomme sijaitsee Maksamaalla Vöyrin kunnassa Pohjanmaalla – kytkettynä keskijännitemuuntamoon.",
     bessK1:"Sijainti", bessV1:"Maksamaa, Vöyrin kunta<small>Pohjanmaa, Suomi</small>",
     bessK2:"Muuntamo", bessV2:"1 600 kVA keskijännite<small>20 / 0,4 kV</small>",
     bessK3:"Akut", bessV3:"4 × Cactos Mylo<small>260 kVA / 520 kWh per yksikkö</small>",
-    bessK4:"Kokonaiskapasiteetti", bessV4:"1 040 kVA / 2 080 kWh<small>50–100 % laajennus kun Fingrid sallii</small>",
+    bessK4:"Kokonaiskapasiteetti", bessV4:"999 kW / 2 080 kWh<small>50–100 % laajennus kun Fingrid sallii</small>",
     bessK5:"Käyttöönotto", bessV5:"Marraskuu 2026",
-    bessStat1:"kVA tehoa", bessStat2:"kWh varastoa", bessStat3:"Cactos Mylo",
+    bessK6:"Co-hosting", bessV6:"Mahdollisuus co-hostingiin<small>Alue on valmiiksi valmisteltu 4 × Mylo -yksikölle tai vastaavalle jalanjäljelle</small>",
+    bessStat1:"kW tehoa", bessStat2:"kWh varastoa", bessStat3:"Cactos Mylo",
     bessNote:"Neljä Cactos Mylo -yksikköä kytketään muuntamoon. Kapasiteettia voidaan laajentaa 50–100 % sitä mukaa kun Fingrid sallii suuremman tehon.",
     bessBadge:"Käyttöönotto marraskuu 2026",
     logoEyebrow:"Visuaalinen ilme", logoH2:"Kolme logoehdotusta",
@@ -469,14 +480,16 @@ const I18N = {
     idea4h:"Finnish & European tech", idea4p:"Components built for the Nordic climate with strong IT security – Finnish and European technology.",
     idea5h:"Purposeful placement", idea5p:"Placement adjacent to properties, enabling collaboration between electricity producers and consumers.",
     idea6h:"Local contractors", idea6p:"We hire local contractors for construction and operation where possible – supporting rural employment.",
+    idea7h:"Capacity for industry", idea7p:"Do you run an energy-intensive industrial business and is your current grid connection limiting your growth? Let us help with a battery! We arrange extra capacity to match your needs.",
     bessEyebrow:"Our first project", bessH2:"BESS no. 1 – Maxmo",
     bessIntro:"Our first battery storage unit is located in Maxmo, Vörå municipality, Ostrobothnia – connected to a medium-voltage substation.",
     bessK1:"Location", bessV1:"Maxmo, Vörå municipality<small>Ostrobothnia, Finland</small>",
     bessK2:"Substation", bessV2:"1,600 kVA medium voltage<small>20 / 0.4 kV</small>",
     bessK3:"Batteries", bessV3:"4 × Cactos Mylo<small>260 kVA / 520 kWh per unit</small>",
-    bessK4:"Total capacity", bessV4:"1,040 kVA / 2,080 kWh<small>50–100% expansion when Fingrid allows</small>",
+    bessK4:"Total capacity", bessV4:"999 kW / 2,080 kWh<small>50–100% expansion when Fingrid allows</small>",
     bessK5:"Operational start", bessV5:"November 2026",
-    bessStat1:"kVA power", bessStat2:"kWh storage", bessStat3:"Cactos Mylo",
+    bessK6:"Co-hosting", bessV6:"Co-hosting available<small>The site is fully prepared for 4 × Mylo or an equivalent footprint</small>",
+    bessStat1:"kW power", bessStat2:"kWh storage", bessStat3:"Cactos Mylo",
     bessNote:"Four Cactos Mylo units connect to the substation. Capacity can be expanded by 50–100% as Fingrid allows higher power output.",
     bessBadge:"Operational November 2026",
     logoEyebrow:"Visual identity", logoH2:"Three logo proposals",
